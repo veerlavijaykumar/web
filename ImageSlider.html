@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageSlider</title>
+    <style>
+        #position
+        .image
+        {
+            width:500px;
+            height:500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="position">
+        <div id="images">
+            <img class="image" src="https://ydnews.in/wp-content/uploads/2021/07/rolls-royce-image-818x490.jpg">
+            <img class="image" src="https://i.ytimg.com/vi/j3iALi2XuBY/sddefault.jpg">
+            <img class="image" src="https://images.livemint.com/img/2021/05/30/1600x900/2021-05-25T153718Z_1400945490_RC23NN98S6VM_RTRMADP_3_VOLKSWAGEN-LAMBORGHINI_1622351297870_1622351416573.JPG">
+            <img class="image" src="https://static.theceomagazine.net/wp-content/uploads/2019/12/12082634/aston-valhalla.jpg">
+        </div>
+        <button onclick="next()">Next</button>
+        <button onclick="prev()">Previous</button>
+    </div>
+    <script>
+        let a = document.querySelectorAll('.image');
+        let index = 0;
+        
+        function showImages(index) {
+            a.forEach((image) => {
+                image.style.display = 'none';
+            });
+            a[index].style.display = "block";  
+        }
+        
+        function next() {
+            index += 1;
+            if (index > a.length - 1) {
+                index = 0;
+            }
+            showImages(index);
+        }
+        
+        function prev() {
+            index -= 1;
+            if (index < 0) {
+                index = a.length - 1;
+            }
+            showImages(index);
+        }
+        
+        // Initial setup
+        showImages(index);
+        
+    </script>
+</body>
+</html>

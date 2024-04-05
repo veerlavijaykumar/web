@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            height: 700px;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #image {
+            width: 700px; /* Adjust image width */
+            border-radius: 50%; /* Make image round */
+        }
+        #p1 {
+            width: 500px;
+            font-size: 25px;
+        }
+        #position
+        {
+            display:flex;
+            height:100px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <marquee><h1>My Personal Portfolio</h1></marquee>
+    <div id="container">
+        <img src="https://www.ft.com/__origami/service/image/v2/images/raw/ftcms%3A7067eefd-4b3c-4ffd-b84f-1b9527fd8c4e?source=next-article&fit=scale-down&quality=highest&width=1440&dpr=1" id="image">
+        <p id="p1">Welcome to Everyone!!
+            I am Vijay Kumar. And I am from Tenali . I am a technical aspirant and At present I am studying Btech 2nd year in the stream of Computer Science and Engineering. I am glad to share my Knowledge
+        </p>
+    </div> 
+    <button id="b1"></button>
+    <script>
+        let a = document.getElementById('container');
+        let b1 = document.getElementById('b1'); // Get the button element
+        b1.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.setAttribute('type', 'text'); // Set type attribute to 'text'
+            input.value = '7893923377';
+            a.appendChild(input);
+        });
+    </script>
+</body>
+</html>

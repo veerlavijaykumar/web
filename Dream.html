@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("https://img.freepik.com/free-vector/overlapping-forms-wallpaper-theme_52683-44653.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: spin 4s linear infinite;
+
+        }
+        @keyframes spin
+        {
+            0%
+            {
+                background-size:1600px;
+            }
+            50%
+            {
+                background-size: 1800px;
+            }
+            100%
+            {
+                background-size: 2000px;
+            }
+        }
+       #form
+       {
+        display:flex;
+        height:500px;
+        justify-content: center;
+        align-items:center;
+       }
+       #mail
+       {
+        display:flex;
+        height:100px;
+        justify-content: center;
+        align-items:center; 
+       }
+       #email
+       {
+        margin-left: 20px;
+       }
+       label
+       {
+        font-size: 20px;
+        font-family: helvetica;
+        color:aliceblue;
+       }
+       #pass
+       {
+        display:flex;
+        height:100px;
+        justify-content: center;
+        align-items:center; 
+       }
+       #password
+       {
+        margin-left: 20px;
+       }
+       #head
+       {
+        text-align: center;
+       font-family:helvetica;
+        color:white;
+       }
+    
+    </style>
+</head>
+<body>
+    <h1 id="head">Enter your details to use this!!</h1>
+    <div id="form">
+        <form action="PDF.html">
+           <div id="mail">
+            <label for="email">Email-ID</label>
+             <input type="email"  id='email' required>
+           </div>
+           <div id="pass">
+            <label for="password">Password</label>
+            <input type="password"  id='password' required>
+           </div>
+           <div id="button">
+           <input type="submit">
+           <input type="reset" value="Cancel">
+           </div>
+        </form>
+    </div>
+   <script>
+        let form = document.getElementById('form');
+        form.addEventListener('submit', function(event) {
+            let emailInput = document.getElementById('email');
+            console.log(emailInput.value);
+            // Corrected to include parentheses
+            event.preventDefault();
+            window.location.href="PDF.html";
+        });
+    </script>
+    
+   </script>
+</body>
+</html>
